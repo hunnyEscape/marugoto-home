@@ -12,12 +12,19 @@ export default function Footer({ onOpenLegalModal }: FooterProps) {
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 					<div className="flex flex-col justify-between h-full">
 						<div>
-							<h2 className={`${TEXT_STYLES.sectionTitle} mb-2`}>X-MODE</h2>
+							<h2 className={`${TEXT_STYLES.sectionTitle} mb-1`}>まるごとワークス.ai</h2>
 							<p className={TEXT_STYLES.paragraph}>
-								eスポーツの新しいスタンダード
+								MARUGOTO-WORKS.AI
 							</p>
 						</div>
-						<div className="flex gap-4 ml-1">
+					</div>
+					<div>
+						<h3 className={`${TEXT_STYLES.articleTitle} mb-1`}>連絡先</h3>
+						<div className={TEXT_STYLES.paragraph}>
+							<p className="mb-0">所在地 : 東京都渋谷区渋谷2-19-15宮益坂ビルディング609</p>
+							<p className="mb-1">メールアドレス:info@marugoto-works.com</p>
+						</div>
+						<div className="flex gap-4 ml-1 mt-5">
 							<button
 								onClick={() => onOpenLegalModal('disclaimer')}
 								className={`${TEXT_STYLES.articleTitle} cursor-pointer hover:text-white`}
@@ -30,20 +37,6 @@ export default function Footer({ onOpenLegalModal }: FooterProps) {
 							>
 								プライバシーポリシー
 							</button>
-						</div>
-					</div>
-					<div>
-						<h3 className={`${TEXT_STYLES.articleTitle} mb-4`}>特定商取引に基づく表記</h3>
-						<div className={TEXT_STYLES.paragraph}>
-							<p className="mb-2">事業者名 : 山根康平</p>
-							<p className="mb-2">代表者 : 山根康平</p>
-							<p className="mb-2">所在地 : 東京都渋谷区渋谷2-19-15宮益坂ビルディング609</p>
-							<p className="mb-2">連絡先 : 050-3115-2346</p>
-							<p className="mb-2">メールアドレス : support@acceleratefreedom.jp</p>
-							<p className="mb-2">商品代金以外の必要料金 : 設置・サポート費用</p>
-							<p className="mb-2">返品・交換 : 商品の特性上、原則として返品・交換は承れません</p>
-							<p className="mb-2">お支払い方法 : クレジットカード、銀行振込</p>
-							<p>役務の提供時期 : 契約成立後、最短1週間以内</p>
 						</div>
 					</div>
 				</div>

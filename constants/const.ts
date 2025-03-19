@@ -72,23 +72,27 @@ export const gameInfos: GameInfo[] = [
 ];
 export const games = [
 	{
-		title: "Counter-Strike 2",
-		description: "最も競技性の高いタイトル",
-		imageUrl:`${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/c1.webp`,
+		title: "フリーランサー支援のDiscord Bot",
+		description: `クライアントの信頼や工数を詳細に分析し、良質な案件を自動抽出して通知する。単発案件のオーバーヘッドとリスクを大幅に削減する。`,
+		imageUrl:`${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/mr23.webp`,
 	},
 	{
-		title: "Microsoft Flight Simulator",
-		description: "究極のフライトシム",
-		imageUrl:`${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/m1.webp`,
+		title: "公式Lineの顧客対応支援",
+		description:`
+			あらかじめ決められたシナリオ型チャットではなく、商材やサービスのドメイン知識をRAG(Retrieval Augmented Generation)で覚え込ませた対話型のチャットBotを公式Lineに組み込む。
+			そのことでユーザーヒヤリングと日常会話の接点を自動化できる。
+			会話データを蓄積し、ユーザーごとのレポートを出力する。
+			`,
+		imageUrl:`${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/mr24.webp`,
 	},
 	{
-		title: "Fortnite",
-		description: "史上最大のプレイヤー数を誇るバトルロイヤル",
-		imageUrl:`${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/f1.webp`,
+		title: "ブランドサイト作成支援",
+		description: "ストーリの構築、コピーライト、デザイン、決済システムの組み込みまで一気通貫",
+		imageUrl:`${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/mr25.webp`,
 	},
 	{
-		title: "Gran Turismo 7",
-		description: "プロが認めるリアルドライビングシム",
-		imageUrl: `${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/g1.webp`,
+		title: "ビジネストレンドへのフォロー支援",
+		description: "ユーザーが自分の好みの3Dオブジェクトをリアルタイム作成後、それをNFT化し、二次流通させることのできる統合プラットフォームの構築",
+		imageUrl: `${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/mr26.webp`,
 	},
 ];
