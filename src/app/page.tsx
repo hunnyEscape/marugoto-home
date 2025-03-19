@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import Head from 'next/head'
 import Image from 'next/image';
 import GameCard from '../../components/GameCard';
 import InquiryModal from "../../components/InquiryModal";
