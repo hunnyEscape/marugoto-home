@@ -17,17 +17,17 @@ const ogImage = `${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/bg.webp`;
 export const metadata: Metadata = {
 	metadataBase: new URL("https://marugoto-works.com"),
 	title: {
-		default: "まるごとワークス - 生成AI活用と事業検証の支援",
+		default: "事業検証の支援",
 		template: "%s | まるごとワークス"
 	},
-	description: "まるごとワークスは、生成AIを活用した事業検証とビジネス開発を支援します。最新の技術とマーケティング戦略を駆使し、新規事業の立ち上げや成長をサポートします。",
+	description: "事業検証とビジネス開発を支援します。最新の技術とマーケティング戦略を駆使し、新規事業の立ち上げや成長をサポートします。",
 	openGraph: {
-		title: "まるごとワークス - 生成AI活用と事業検証の支援",
-		description: "まるごとワークスは、生成AIを活用した事業検証とビジネス開発を支援します。",
+		title: "まるごとワークス.ai",
+		description: "事業検証とビジネス開発を支援します。",
 		type: "website",
 		locale: "ja_JP",
 		url: "https://marugoto-works.com",
-		siteName: "まるごとワークス",
+		siteName: "まるごとワークス.ai",
 		images: [
 			{
 				url: ogImage,
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "まるごとワークス - 生成AI活用と事業検証の支援",
-		description: "まるごとワークスは、生成AIを活用した事業検証とビジネス開発を支援。",
+		title: "まるごとワークス.ai",
+		description: "事業検証とビジネス開発を支援",
 		images: [ogImage]
 	},
 	keywords: [
