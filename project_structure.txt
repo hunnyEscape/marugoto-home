@@ -1,0 +1,36 @@
+.
+├── README.md
+├── components
+│   ├── BackgroundAnimation.tsx
+│   ├── Footer.tsx
+│   ├── GameCard.tsx
+│   ├── ImageModal.tsx
+│   ├── InquiryModal.tsx
+│   ├── LegalModal.tsx
+│   ├── ParticleBackground.tsx
+│   └── SimpleBackgroundAnimation.tsx
+├── constants
+│   └── const.ts
+├── eslint.config.mjs
+├── next-env.d.ts
+├── next.config.ts
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── project_files.md
+├── project_structure.txt
+├── public
+│   ├── file.svg
+│   ├── globe.svg
+│   ├── next.svg
+│   ├── vercel.svg
+│   └── window.svg
+├── src
+│   └── app
+│       ├── favicon.ico
+│       ├── globals.css
+│       ├── layout.tsx
+│       └── page.tsx
+└── tsconfig.json
+
+5 directories, 28 files
