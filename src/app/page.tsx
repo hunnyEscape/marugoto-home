@@ -20,13 +20,6 @@ export default function Home() {
 		<>
 			<LegalModal isOpen={legalModalOpen} onClose={() => setLegalModalOpen(false)} type={legalModalType} />
 			<InquiryModal isOpen={inquiryModalOpen} onClose={() => setInquiryModalOpen(false)} />
-			<Head>
-				<title>加速する自由 - ゲーミング配信サービス</title>
-				<meta
-					name="description"
-					content="専門のプロによるゲーミング＆配信環境構築サポート。快適なプレイ環境を実現します。"
-				/>
-			</Head>
 			<div className="z-[-1]">
 				<ParticleBackground />
 			</div>
