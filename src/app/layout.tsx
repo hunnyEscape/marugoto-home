@@ -17,7 +17,7 @@ const ogImage = `${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/bg.webp`;
 export const metadata: Metadata = {
 	metadataBase: new URL('https://your-domain.com'),
 	title: {
-		default: 'X-MODE - シニアのeスポーツ環境構築サポート',
+		default: 'まるごとワークス.ai 事業検証の支援',
 		template: '%s | X-MODE'
 	},
 	description: 'シニアのeスポーツ環境構築サービス。専門スタッフが、年齢に関係なく誰もが楽しめるゲーミング環境を丁寧にサポートします。',

@@ -1,10 +1,10 @@
 import { GameInfo } from '../components/GameCard';
 export const TEXT_STYLES = {
 	title: "text-5xl font-extrabold mb-4",
-	sectionTitle: "text-6xl font-extrabold mb-2 text-blue-600 leading-[1.1]",
-	subtitle: "text-xl ml-1 text-gray-500",
+	sectionTitle: "text-4xl md:text-6xl font-extrabold mb-2 text-blue-600 leading-[1.1]",
+	subtitle: "text-lg md:text-xl ml-0 md:ml-1 text-gray-500",
 	articleTitle: "text-xl ml-1 text-gray-300 font-bold",
-	paragraph: "text-xl ml-1 text-gray-500",
+	paragraph: "text-lg md:text-xl ml-1 text-gray-500",
 	minorText: "text-gray-600",
 	listItem: "text-lg mb-2 text-gray-500",
 }
@@ -72,27 +72,25 @@ export const gameInfos: GameInfo[] = [
 ];
 export const games = [
 	{
-		title: "フリーランサー支援のDiscord Bot",
-		description: `クライアントの信頼や工数を詳細に分析し、良質な案件を自動抽出して通知する。単発案件のオーバーヘッドとリスクを大幅に削減する。`,
-		imageUrl:`${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/mr23.webp`,
+		title: "フリーランサー向けの案件通知Bot（Discord）",
+		description: `クライアントの信頼性や工数を分析し、高品質な案件のみを自動抽出して通知します。これにより、単発案件のオーバーヘッドやリスクを大幅に削減し、より安定した受注が可能になります。`,
+		imageUrl: `${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/mr23.webp`,
 	},
 	{
-		title: "公式Lineの顧客対応支援",
-		description:`
-			あらかじめ決められたシナリオ型チャットではなく、商材やサービスのドメイン知識をRAG(Retrieval Augmented Generation)で覚え込ませた対話型のチャットBotを公式Lineに組み込む。
-			そのことでユーザーヒヤリングと日常会話の接点を自動化できる。
-			会話データを蓄積し、ユーザーごとのレポートを出力する。
+		title: "公式LINEアカウントの顧客対応AI",
+		description: `従来のシナリオ型チャットBotではなく、RAG（Retrieval Augmented Generation）を活用した対話型AIを組み込みます。商材やサービスの専門知識を学習させ、顧客の質問に柔軟に対応します。
+					ユーザーのヒアリングや日常会話を自動化します。会話データを蓄積し、ユーザーごとのレポートを出力します。
 			`,
-		imageUrl:`${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/mr24.webp`,
+		imageUrl: `${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/mr24.webp`,
 	},
 	{
-		title: "ブランドサイト作成支援",
-		description: "ストーリの構築、コピーライト、デザイン、決済システムの組み込みまで一気通貫",
-		imageUrl:`${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/mr25.webp`,
+		title: "ブランドサイト制作支援",
+		description: "企業や個人のブランド構築をサポート。ストーリー設計、コピーライティング、デザイン制作、決済システムの統合、企画から公開まで一気通貫で対応します。",
+		imageUrl: `${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/mr25.webp`,
 	},
 	{
-		title: "ビジネストレンドへのフォロー支援",
-		description: "ユーザーが自分の好みの3Dオブジェクトをリアルタイム作成後、それをNFT化し、二次流通させることのできる統合プラットフォームの構築",
+		title: "トレンドのフォロー支援(Web3、生成アート)",
+		description: "ユーザーがリアルタイムで好みの3Dオブジェクトを生成し、それをNFT化・二次流通まで行える統合プラットフォームの開発",
 		imageUrl: `${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/mr26.webp`,
 	},
 ];

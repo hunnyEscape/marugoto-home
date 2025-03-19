@@ -2,23 +2,16 @@
 import { useState } from "react";
 import Head from 'next/head'
 import Image from 'next/image';
-import GameCard, { GameInfo } from '../../components/GameCard';
-import ImageModal from '../../components/ImageModal';
+import GameCard from '../../components/GameCard';
 import InquiryModal from "../../components/InquiryModal";
 import { TEXT_STYLES, gameInfos, games } from '../../constants/const';
 import ParticleBackground from '../../components/ParticleBackground';
 import Footer, { LegalModalType } from '../../components/Footer';
 import LegalModal from '../../components/LegalModal';
 export default function Home() {
-	const [selectedGame, setSelectedGame] = useState<GameInfo | null>(null);
-	const [modalOpen, setModalOpen] = useState(false);
 	const [inquiryModalOpen, setInquiryModalOpen] = useState(false);
 	const [legalModalOpen, setLegalModalOpen] = useState(false);
 	const [legalModalType, setLegalModalType] = useState<LegalModalType>('disclaimer');
-	const handleOpenModal = (game: GameInfo) => {
-		setSelectedGame(game);
-		setModalOpen(true);
-	};
 	const isLegalModalOpen = (legalModalType: LegalModalType) => {
 		setLegalModalType(legalModalType);
 		setLegalModalOpen(true);
@@ -26,11 +19,6 @@ export default function Home() {
 	return (
 		<>
 			<LegalModal isOpen={legalModalOpen} onClose={() => setLegalModalOpen(false)} type={legalModalType} />
-			<ImageModal
-				game={selectedGame}
-				modalOpen={modalOpen}
-				onClose={() => setModalOpen(false)}
-			/>
 			<InquiryModal isOpen={inquiryModalOpen} onClose={() => setInquiryModalOpen(false)} />
 			<Head>
 				<title>加速する自由 - ゲーミング配信サービス</title>
@@ -44,14 +32,14 @@ export default function Home() {
 			</div>
 			<div className="bg-white text-gray-800 font-sans min-h-screen">
 				<main className="mx-full">
-					<div className="relative flex w-1/2 h-screen items-center justify-center text-center text-white bg-black">
-						<div className="text-left w-4/5">
+					<div className="relative flex w-full md:w-1/2 h-screen items-center justify-center text-center text-white bg-black">
+						<div className="text-left w-full md:w-4/5 p-5">
 							<h1 className={TEXT_STYLES.sectionTitle}>生成AI活用による<br />ビジネス開発の加速</h1>
 							<p className={TEXT_STYLES.subtitle}>Accelerating Business Development with Generative AI</p>
 						</div>
 					</div>
-					<div className="relative flex w-1/2 h-[150vh] items-center justify-center text-center text-white bg-black">
-						<div className="text-left w-4/5">
+					<div className="relative flex w-full md:w-1/2 h-full md:h-[150vh] items-center justify-center text-center text-white bg-black">
+						<div className="text-left w-full md:w-4/5 p-5">
 							<h1 className={TEXT_STYLES.sectionTitle}>シニア向けeスポーツ事業<br />～検証中～</h1>
 							<Image
 								src={`${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/desktop.webp`}
@@ -73,34 +61,39 @@ export default function Home() {
 							</p>
 						</div>
 					</div>
-					<div className="relative flex w-1/2 h-[100vh] bg-black" />
+					<div className="relative flex w-0 md:w-1/2 h-[100vh] bg-black" />
 					<div className="relative flex w-full h-[180vh] items-center justify-center text-white bg-black">
-						<div className="text-left w-2/3">
-							<h1 className={TEXT_STYLES.sectionTitle}>過去の取り組み</h1>
-							<p className={TEXT_STYLES.subtitle}>previous works</p>
-							<div className="grid grid-cols-2 gap-6 mt-10">
+						<div className="text-left w-full md:w-2/3">
+							<h1 className={`${TEXT_STYLES.sectionTitle} px-5`}>過去の取り組み</h1>
+							<p className={`${TEXT_STYLES.subtitle} px-5`}>previous works</p>
+							<div className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-6 mt-0 md:mt-10">
 								{games.map((game, index) => (
 									<GameCard
 										key={index}
 										title={game.title}
 										description={game.description}
 										imageUrl={game.imageUrl}
-										onClick={()=>{}}
+										onClick={() => { }}
 										gameInfo={gameInfos[index]}
 									/>
 								))}
 							</div>
 						</div>
 					</div>
-					<div className="relative flex w-1/2 h-[100vh] items-center justify-left text-white bg-black ml-auto" />
-					<div className="relative flex w-1/2 h-[150vh] items-center justify-left text-white bg-black ml-auto">
+					<div className="relative flex w-0 md:w-1/2 h-[100vh] items-center justify-left text-white bg-black ml-auto" />
+					<div className="relative flex w-full md:w-1/2 h-[150vh] items-center justify-left text-white bg-black ml-auto">
 						<div>
-							<div className="text-left w-3/4">
+							<div className="text-left w-full md:w-3/4 p-5">
 								<h1 className={TEXT_STYLES.sectionTitle}>
-									アイデアの検証に<br/>協力します
+									アイデア検証<br />事業開発支援
 								</h1>
 								<p className={`${TEXT_STYLES.subtitle} mb-2`}>
-									アイデアレベルから、データ抽出作業、技術的検証、マーケティング戦略、運営スキーム、ダウンサイドとアップサイドの見積もりまでつなげます。
+									アイデア段階から実用化までを包括的にサポートします。
+									データ抽出・分析、
+									技術的な検証、
+									マーケティング戦略立案、
+									事業スキームの構築、
+									リスク（ダウンサイド）と成長可能性（アップサイド）の見積もり
 								</p>
 								<Image
 									src={`${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}/ssd.webp`}
@@ -109,29 +102,29 @@ export default function Home() {
 									height={300}
 									className="w-full rounded-lg mb-2"
 								/>
-								<li className={TEXT_STYLES.paragraph}>柔軟な契約形態OK</li>
+								<li className={TEXT_STYLES.paragraph}>柔軟な契約形態に対応可能です。</li>
 							</div>
 						</div>
 					</div>
-					<div className="relative flex w-1/2 h-[130vh] items-center justify-left text-white bg-black ml-auto">
-						<div className="text-left w-3/4">
+					<div className="relative flex w-full md:w-1/2 h-[130vh] items-center justify-left text-white bg-black ml-auto">
+						<div className="text-left w-full md:w-3/4 p-5">
 							<section className="">
 								<h2 className={TEXT_STYLES.sectionTitle}>
 									サービスの流れ
 								</h2>
 								<div className="space-y-8 mt-5">
 									<article>
-										<h3 className={TEXT_STYLES.articleTitle}>1. お問い合わせ</h3>
+										<h3 className={TEXT_STYLES.articleTitle}>1.お問い合わせ</h3>
 										<p className={TEXT_STYLES.paragraph}>まずはご連絡ください。</p>
 									</article>
 									<article>
-										<h3 className={TEXT_STYLES.articleTitle}>2. 見積もり</h3>
-										<p className={TEXT_STYLES.paragraph}>ご相談内容に応じて柔軟に見積もります。</p>
+										<h3 className={TEXT_STYLES.articleTitle}>2.ヒアリング・見積もり</h3>
+										<p className={TEXT_STYLES.paragraph}>ご要望に応じて柔軟にお見積もりを提示します。</p>
 									</article>
 									<article>
-										<h3 className={TEXT_STYLES.articleTitle}>3. 実施</h3>
+										<h3 className={TEXT_STYLES.articleTitle}>3.実施・検証</h3>
 										<p className={TEXT_STYLES.paragraph}>
-											検証のステップで必用になった開発や調査など行っていきます。
+											必要に応じて開発・調査・マーケティング施策を実施し、事業の成功を支援します。
 										</p>
 									</article>
 								</div>
